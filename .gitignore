@@ -1,0 +1,14 @@
+.crashlytics_data/
+.DS_Store
+.gradle/
+.idea
+.settings/
+*.iml
+bin/
+build/
+com_crashlytics_export_strings.xml
+crashlytics-build.properties
+gen/
+local.properties
+*.kwlp
+*.kwps

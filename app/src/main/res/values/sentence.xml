@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="arrSentencesFirstPart">
+        <item>Lisa is excited</item>
+        <item>Einstein is also known</item>
+        <item>He is interested</item>
+        <item>She was pleased</item>
+        <item>We are pleased</item>
+        <item>Abraham is married</item>
+        <item>Could I please have the dictionary when you are finished</item>
+        <item>The choices in that restaurant  are limited</item>
+        <item>I\'m satisfied</item>
+        <item>Are you related</item>
+        <item>This blouse is made</item>
+        <item>She didn\'t get the job even though she was qualified</item>
+        <item>Are you fully acquainted</item>
+        <item>I was concerned</item>
+        <item>He\'s worried</item>
+        <item>They are dedicated</item>
+        <item>Racial problems are certainly not limited</item>
+        <item>Who are filled</item>
+        <item>Penalties are prepared</item>
+        <item>When he rose from prayer and went back to the disciples, he found them asleep, exhausted</item>
+    </string-array>
+
+
+    <string-array name="arrSentencesSecondPart">
+        <item>creating toys children enjoy.</item>
+        <item>his contributions to the development of the quantum theory.</item>
+        <item>how children play with one another.</item>
+        <item>the response to her letter.</item>
+        <item>your work.</item>
+        <item>Sarah.</item>
+        <item>it?</item>
+        <item>pizza and sandwiches.</item>
+        <item>the progress I have made.</item>
+        <item>Abraham Lincoln?</item>
+        <item>the finest silk.</item>
+        <item>it.</item>
+        <item>the facts?</item>
+        <item>my grades.</item>
+        <item>losing his job.</item>
+        <item>helping people in times of crisis.</item>
+        <item>the south.</item>
+        <item>gladness and rejoice when they reach the grave?</item>
+        <item>mockers, and beatings for the backs of fools.</item>
+        <item>sorrow.</item>
+    </string-array>
+
+    <string-array name="arrAnswers">
+        <item>about</item>
+        <item>for</item>
+        <item>in</item>
+        <item>with</item>
+        <item>with</item>
+        <item>to</item>
+        <item>with</item>
+        <item>to</item>
+        <item>with</item>
+        <item>to</item>
+        <item>of</item>
+        <item>for</item>
+        <item>with</item>
+        <item>about</item>
+        <item>about</item>
+        <item>to</item>
+        <item>to</item>
+        <item>with</item>
+        <item>for</item>
+        <item>from</item>
+    </string-array>
+
+    <string-array name="arrGrammar">
+        <item>be known for</item>
+        <item>be qualified for</item>
+        <item>be prepared for</item>
+        <item>be remembered for</item>
+        <item>be well known for</item>
+        <item>- - - - - - - - - - - -</item>
+        <item>be excited about</item>
+        <item>be concerned about</item>
+        <item>be worried about</item>
+        <item>- - - - - - - - - - - -</item>
+        <item>be exhausted from</item>
+        <item>be divorced from</item>
+        <item>be gone from</item>
+        <item>be protected from</item>
+        <item>- - - - - - - - - - - -</item>
+        <item>be interested in</item>
+        <item>be dressed in</item>
+        <item>be located in</item>
+        <item>be disappointed in/with</item>
+        <item>be involved in/with</item>
+        <item>- - - - - - - - - - - -</item>
+        <item>be composed of</item>
+        <item>be made of</item>
+        <item>be tired of</item>
+        <item>- - - - - - - - - - - -</item>
+        <item>be frightened of/by</item>
+        <item>be scared of/by</item>
+        <item>be terrified of/by</item>
+        <item>- - - - - - - - - - - -</item>
+        <item>be married to</item>
+        <item>be limited to</item>
+        <item>be accustomed to</item>
+        <item>be addicted to</item>
+        <item>be committed to</item>
+        <item>be connected to</item>
+        <item>be dedicated to</item>
+        <item>be devoted to</item>
+        <item>be engaged to</item>
+        <item>be exposed to</item>
+        <item>be opposed to</item>
+        <item>- - - - - - - - - - - -</item>
+        <item>be acquainted with</item>
+        <item>be finished with</item>
+        <item>be pleased with</item>
+        <item>be satisfied with</item>
+        <item>be associated with</item>
+        <item>be filled with</item>
+        <item>be cluttered with</item>
+        <item>be crowded with</item>
+        <item>be done with</item>
+        <item>be equipped with</item>
+        <item>be provided with</item>
+        <item>- - - - - - - - - - - -</item>
+        <item>be annoyed with/by</item>
+        <item>be bored with/by</item>
+        <item>be covered with/by</item>
+        <item>be discriminated against</item>
+    </string-array>
+
+</resources>
