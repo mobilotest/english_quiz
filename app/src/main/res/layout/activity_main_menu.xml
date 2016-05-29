@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainMenu"
+    android:background="@drawable/main_menu"
+    android:alpha="1">
+
+    <TextView
+        android:text="@string/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/headerQuiz"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:textColor="#FFFFFF" />
+
+    <ImageButton
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:id="@+id/firstImgBtn"
+        android:layout_toEndOf="@+id/exitImgButton"
+        android:onClick="btnFirst_Grammar"
+        android:alpha="0"
+        android:adjustViewBounds="false"
+        android:layout_below="@+id/headerQuiz"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/headerQuiz"
+        android:layout_alignEnd="@+id/headerQuiz" />
+
+    <ImageButton
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:id="@+id/secondImgBtn"
+        android:onClick="btnSecond_Quiz"
+        android:adjustViewBounds="false"
+        android:alpha="0"
+        android:layout_above="@+id/exitImgButton"
+        android:layout_marginBottom="65dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="170sp"
+        android:layout_height="wrap_content"
+        android:id="@+id/exitImgButton"
+        android:onClick="exitHome"
+        android:alpha="0"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="59dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/secondImgBtn"
+        android:layout_alignEnd="@+id/secondImgBtn" />
+
+</RelativeLayout>
