@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/bgnd1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bgd1" />
+
+            <TextView
+                android:id="@+id/txtSentence1_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="32dp"
+                android:gravity="center|top"
+                android:text="New Text1"
+                android:textColor="#DFDFDF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtSentence1_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txtSentence1_1"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/txtSentence1_1"
+                android:layout_below="@+id/enterHere"
+                android:gravity="center|top"
+                android:paddingBottom="20sp"
+                android:text="New Text2"
+                android:textColor="#DFDFDF"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/enterHere1_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=" . . . "
+                android:imeOptions="actionGo"
+                android:inputType="text"
+                android:privateImeOptions="Done"
+                android:textColor="#FEFEFE"
+                android:textSize="20sp"
+                android:layout_alignBaseline="@+id/txtSentence1_1"
+                android:layout_alignBottom="@+id/txtSentence1_1"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/txtEnterNext1_1"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:gravity="center"
+                android:text="@string/nextBtn"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_toRightOf="@+id/enterHere1_0"
+                android:layout_toEndOf="@+id/enterHere1_0" />
+
+            <TextView
+                android:id="@+id/txtDontKnow1_2"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:gravity="center"
+                android:text="@string/giveUpBtn"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_toLeftOf="@+id/enterHere1_0"
+                android:layout_toStartOf="@+id/enterHere1_0" />
+
+            <ImageButton
+                android:id="@+id/imgDntKnwBtn1_1"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:onClick="btnNextEnter"
+                android:padding="20sp"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/txtDontKnow1_2"
+                android:layout_alignEnd="@+id/txtDontKnow1_2"
+                android:layout_alignBottom="@+id/txtDontKnow1_2" />
+
+            <ImageButton
+                android:id="@+id/imgNextEnter1_2"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:onClick="btnNextEnter"
+                android:padding="20sp"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_alignLeft="@+id/txtEnterNext1_1"
+                android:layout_alignStart="@+id/txtEnterNext1_1" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/bgnd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bckgrnd" />
+
+            <TextView
+                android:id="@+id/txtSentence2_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="32dp"
+                android:gravity="center|top"
+                android:text="New Text1"
+                android:textColor="#DFDFDF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtSentence2_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txtSentence1_1"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/txtSentence1_1"
+                android:layout_below="@+id/enterHere"
+                android:gravity="center|top"
+                android:paddingBottom="20sp"
+                android:text="New Text2"
+                android:textColor="#DFDFDF"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/enterHere2_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=" . . . "
+                android:imeOptions="actionGo"
+                android:inputType="text"
+                android:privateImeOptions="Done"
+                android:textColor="#FEFEFE"
+                android:textSize="20sp"
+                android:layout_alignBaseline="@+id/txtSentence1_1"
+                android:layout_alignBottom="@+id/txtSentence1_1"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/txtEnterNext2_1"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:gravity="center"
+                android:text="@string/nextBtn"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_toRightOf="@+id/enterHere1_0"
+                android:layout_toEndOf="@+id/enterHere1_0" />
+
+            <TextView
+                android:id="@+id/txtDontKnow2_2"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:gravity="center"
+                android:text="@string/giveUpBtn"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_toLeftOf="@+id/enterHere1_0"
+                android:layout_toStartOf="@+id/enterHere1_0" />
+
+            <ImageButton
+                android:id="@+id/imgDntKnwBtn2_1"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:onClick="btnNextEnter"
+                android:padding="20sp"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/txtDontKnow1_2"
+                android:layout_alignEnd="@+id/txtDontKnow1_2"
+                android:layout_alignBottom="@+id/txtDontKnow1_2" />
+
+            <ImageButton
+                android:id="@+id/imgNextEnter2_2"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:onClick="btnNextEnter"
+                android:padding="20sp"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_alignLeft="@+id/txtEnterNext1_1"
+                android:layout_alignStart="@+id/txtEnterNext1_1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/bgnd3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bgd1" />
+
+            <TextView
+                android:id="@+id/txtSentence3_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="32dp"
+                android:gravity="center|top"
+                android:text="New Text1"
+                android:textColor="#DFDFDF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtSentence3_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txtSentence1_1"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/txtSentence1_1"
+                android:layout_below="@+id/enterHere"
+                android:gravity="center|top"
+                android:paddingBottom="20sp"
+                android:text="New Text2"
+                android:textColor="#DFDFDF"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/enterHere3_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=" . . . "
+                android:imeOptions="actionGo"
+                android:inputType="text"
+                android:privateImeOptions="Done"
+                android:textColor="#FEFEFE"
+                android:textSize="20sp"
+                android:layout_alignBaseline="@+id/txtSentence1_1"
+                android:layout_alignBottom="@+id/txtSentence1_1"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/txtEnterNext3_1"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:gravity="center"
+                android:text="@string/nextBtn"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_toRightOf="@+id/enterHere1_0"
+                android:layout_toEndOf="@+id/enterHere1_0" />
+
+            <TextView
+                android:id="@+id/txtEnterNext3_2"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:gravity="center"
+                android:text="@string/giveUpBtn"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_toLeftOf="@+id/enterHere1_0"
+                android:layout_toStartOf="@+id/enterHere1_0" />
+
+            <ImageButton
+                android:id="@+id/imgDntKnwBtn3_1"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:onClick="btnNextEnter"
+                android:padding="20sp"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/txtDontKnow1_2"
+                android:layout_alignEnd="@+id/txtDontKnow1_2"
+                android:layout_alignBottom="@+id/txtDontKnow1_2" />
+
+            <ImageButton
+                android:id="@+id/imgNextEnter3_2"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:onClick="btnNextEnter"
+                android:padding="20sp"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_alignLeft="@+id/txtEnterNext1_1"
+                android:layout_alignStart="@+id/txtEnterNext1_1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/bgnd4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bgd1" />
+
+            <TextView
+                android:id="@+id/txtSentence4_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="32dp"
+                android:gravity="center|top"
+                android:text="New Text1"
+                android:textColor="#DFDFDF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtSentence4_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txtSentence1_1"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/txtSentence1_1"
+                android:layout_below="@+id/enterHere"
+                android:gravity="center|top"
+                android:paddingBottom="20sp"
+                android:text="New Text2"
+                android:textColor="#DFDFDF"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/enterHere4_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=" . . . "
+                android:imeOptions="actionGo"
+                android:inputType="text"
+                android:privateImeOptions="Done"
+                android:textColor="#FEFEFE"
+                android:textSize="20sp"
+                android:layout_alignBaseline="@+id/txtSentence1_1"
+                android:layout_alignBottom="@+id/txtSentence1_1"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/txtEnterNext4_1"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:gravity="center"
+                android:text="@string/nextBtn"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_toRightOf="@+id/enterHere1_0"
+                android:layout_toEndOf="@+id/enterHere1_0" />
+
+            <TextView
+                android:id="@+id/txtEnterNext4_2"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:gravity="center"
+                android:text="@string/giveUpBtn"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_toLeftOf="@+id/enterHere1_0"
+                android:layout_toStartOf="@+id/enterHere1_0" />
+
+            <ImageButton
+                android:id="@+id/imgDntKnwBtn4_1"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:onClick="btnNextEnter"
+                android:padding="20sp"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/txtDontKnow1_2"
+                android:layout_alignEnd="@+id/txtDontKnow1_2"
+                android:layout_alignBottom="@+id/txtDontKnow1_2" />
+
+            <ImageButton
+                android:id="@+id/imgNextEnter4_2"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:onClick="btnNextEnter"
+                android:padding="20sp"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_alignLeft="@+id/txtEnterNext1_1"
+                android:layout_alignStart="@+id/txtEnterNext1_1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/bgnd5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bgd1" />
+
+            <TextView
+                android:id="@+id/txtSentence5_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="32dp"
+                android:gravity="center|top"
+                android:text="New Text1"
+                android:textColor="#DFDFDF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtSentence5_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txtSentence1_1"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/txtSentence1_1"
+                android:layout_below="@+id/enterHere"
+                android:gravity="center|top"
+                android:paddingBottom="20sp"
+                android:text="New Text2"
+                android:textColor="#DFDFDF"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/enterHere5_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=" . . . "
+                android:imeOptions="actionGo"
+                android:inputType="text"
+                android:privateImeOptions="Done"
+                android:textColor="#FEFEFE"
+                android:textSize="20sp"
+                android:layout_alignBaseline="@+id/txtSentence1_1"
+                android:layout_alignBottom="@+id/txtSentence1_1"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/txtEnterNext5_1"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:gravity="center"
+                android:text="@string/nextBtn"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_toRightOf="@+id/enterHere1_0"
+                android:layout_toEndOf="@+id/enterHere1_0" />
+
+            <TextView
+                android:id="@+id/txtEnterNext5_2"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:gravity="center"
+                android:text="@string/giveUpBtn"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_toLeftOf="@+id/enterHere1_0"
+                android:layout_toStartOf="@+id/enterHere1_0" />
+
+            <ImageButton
+                android:id="@+id/imgDntKnwBtn5_1"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:onClick="btnNextEnter"
+                android:padding="20sp"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/txtDontKnow1_2"
+                android:layout_alignEnd="@+id/txtDontKnow1_2"
+                android:layout_alignBottom="@+id/txtDontKnow1_2" />
+
+            <ImageButton
+                android:id="@+id/imgNextEnter5_2"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:onClick="btnNextEnter"
+                android:padding="20sp"
+                android:layout_below="@+id/enterHere1_0"
+                android:layout_alignLeft="@+id/txtEnterNext1_1"
+                android:layout_alignStart="@+id/txtEnterNext1_1" />
+        </RelativeLayout>
+    </ViewFlipper>
+
+
+    <ImageView
+        android:id="@+id/imgBusUp"
+        android:layout_width="250sp"
+        android:layout_height="300sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="190dp"
+        android:src="@drawable/bus1" />
+
+    <ImageView
+        android:id="@+id/imgBus"
+        android:layout_width="250sp"
+        android:layout_height="300sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="190dp" />
+
+</RelativeLayout>

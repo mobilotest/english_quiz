@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/actionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="5sp"
+    android:paddingTop="7sp"
+    android:background="#000000">
+
+    <TextView
+        android:id="@+id/titleFragment1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment1"
+        android:textColor="#5ac9c9c9"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/titleFragment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/fragment2"
+        android:textColor="#986a6a6a"
+        android:textSize="20sp" />
+
+</LinearLayout>
