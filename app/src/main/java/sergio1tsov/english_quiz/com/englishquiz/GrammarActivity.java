@@ -12,14 +12,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ExpandableListView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class GrammarActivity extends Activity {
 
-    private ListView mylistview;
-    private ArrayAdapter<String> listAdapter;
+    private ExpandableListView mylistview;
+    private WordListArrayAdapter listAdapter;
     private TextView header;
     private TextView btnMenu;
     private TextView btnQuiz;
@@ -84,10 +88,12 @@ public class GrammarActivity extends Activity {
 
 
 // List:
-        mylistview = (ListView) findViewById(R.id.lvGrammar);
+        mylistview = (ExpandableListView) findViewById(R.id.lvGrammar);
 
-        listAdapter = new ArrayAdapter<String>(this,
-                R.layout.list_white_text, R.id.list_content, getResources().getStringArray(R.array.arrGrammar));
+//        listAdapter = new ArrayAdapter<String>(this,
+//                R.layout.list_white_text, R.id.list_content, getResources().getStringArray(R.array.arrGrammar));
+        ArrayList<String> words = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.arrGrammar)));
+        listAdapter = new WordListArrayAdapter(this, words);
         mylistview.setAdapter(listAdapter);
 
 //        mylistview.setTextColor(color.parseColor("#F12345"));
