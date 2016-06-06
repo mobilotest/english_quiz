@@ -3,8 +3,6 @@ package sergio1tsov.english_quiz.com.englishquiz;
 import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.AnimationDrawable;
@@ -17,16 +15,12 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.animation.TranslateAnimation;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
@@ -36,7 +30,7 @@ import java.util.Random;
 
 // declare variables:
 
-public class QuizAnswer extends Activity {
+public class QuizAnswerActivity extends Activity {
 
     AnimationDrawable goodBusAnimation;
     AnimationDrawable badBusAnimation;
@@ -51,7 +45,7 @@ public class QuizAnswer extends Activity {
         this.getActionBar().setDisplayShowCustomEnabled(true);
         this.getActionBar().setDisplayShowTitleEnabled(false);
 
-        LayoutInflater inflator = LayoutInflater.from(QuizAnswer.this);
+        LayoutInflater inflator = LayoutInflater.from(QuizAnswerActivity.this);
         View v = inflator.inflate(R.layout.custom_action_bar, null);
 
         Typeface tf = Typeface.createFromAsset(getAssets(),"fonts/freehand.ttf");
@@ -63,14 +57,14 @@ public class QuizAnswer extends Activity {
         frag1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(QuizAnswer.this, MainMenu.class));
+                startActivity(new Intent(QuizAnswerActivity.this, MainMenuActivity.class));
                 finish();
             }
         });
         frag2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(QuizAnswer.this, MainMenu.class));
+                startActivity(new Intent(QuizAnswerActivity.this, MainMenuActivity.class));
                 finish();
             }
         });
@@ -250,7 +244,7 @@ public class QuizAnswer extends Activity {
 //                          result.setText("PLEASE REMEMBER! KEEP GOING:");           // Text on the bottom changes
 //                          result.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
                     bus.setImageResource(R.drawable.bus1);       // Smile changes
-                    iDontKnow.setText("Grammar");               // Button changes on 'GRAMMAR' (maybe redundancy)
+                    iDontKnow.setText("GrammarActivity");               // Button changes on 'GRAMMAR' (maybe redundancy)
                     nextEnter.setText("Next");                 // Button changes on 'NEXT'
                     hideSoftKeyboard();
 
@@ -279,7 +273,7 @@ public class QuizAnswer extends Activity {
 //                            }
 
                 } else {
-                    startActivity(new Intent(QuizAnswer.this, Grammar.class));
+                    startActivity(new Intent(QuizAnswerActivity.this, GrammarActivity.class));
                 }
             }
         });
@@ -330,7 +324,8 @@ public class QuizAnswer extends Activity {
                     ((TextView)newBackgrnd.getCurrentView().findViewById(R.id.txtSentence2)).setText(partTwo[value]);
                     ((EditText)newBackgrnd.getCurrentView().findViewById(R.id.enterHere)).setText(partAns[value]);
                     ((Button)newBackgrnd.getCurrentView().findViewById(R.id.btnDontKnow)).setText("Don't Know");
-                    ((Button)newBackgrnd.getCurrentView().findViewById(R.id.btnNextEnter)).setText("Enter");
+//                    ((Button)newBackgrnd.getCurrentView().findViewById(R.id.btnNextEnter)).setText("Enter");
+                    nextEnter.setText("Enter");
 
                     enteredX.setText("");
 //                          result.setText("ENTER THE MISSING WORD:");
@@ -354,7 +349,7 @@ public class QuizAnswer extends Activity {
 //                          result.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
 //                          bus.setImageResource(R.drawable.bus6);
                     hideSoftKeyboard();
-                    iDontKnow.setText("Grammar");     // Button changes on 'GRAMMAR'
+                    iDontKnow.setText("GrammarActivity");     // Button changes on 'GRAMMAR'
                     nextEnter.setText("Next");            // Button changes on 'NEXT'
 //                          ImageView goodBus = (ImageView) findViewById(R.id.imgBus);
 //                          busGood.setBackgroundResource(R.drawable.bus1);

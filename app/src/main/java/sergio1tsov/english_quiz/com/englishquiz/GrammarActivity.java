@@ -4,7 +4,6 @@ import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
@@ -12,20 +11,32 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.ArrayAdapter;
+import android.widget.ExpandableListView;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-public class MainMenu extends Activity {
 
+public class GrammarActivity extends Activity {
+
+    private ExpandableListView mylistview;
+    private WordListArrayAdapter listAdapter;
     private TextView header;
+    private TextView btnMenu;
+    private TextView btnQuiz;
+
+
 
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     private void createCutomActionBarTitle(){
         this.getActionBar().setDisplayShowCustomEnabled(true);
         this.getActionBar().setDisplayShowTitleEnabled(false);
 
-        LayoutInflater inflator = LayoutInflater.from(MainMenu.this);
+        LayoutInflater inflator = LayoutInflater.from(GrammarActivity.this);
         View v = inflator.inflate(R.layout.custom_action_bar, null);
 
         Typeface tf = Typeface.createFromAsset(getAssets(),"fonts/freehand.ttf");
@@ -37,14 +48,14 @@ public class MainMenu extends Activity {
         frag1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainMenu.this, MainMenu.class));
+                startActivity(new Intent(GrammarActivity.this, MainMenuActivity.class));
                 finish();
             }
         });
         frag2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainMenu.this, MainMenu.class));
+                startActivity(new Intent(GrammarActivity.this, MainMenuActivity.class));
                 finish();
             }
         });
@@ -57,56 +68,60 @@ public class MainMenu extends Activity {
 
 
 
-    /*
-    private TextView result;
-    private ImageView smiley;
-    boolean firstTime = true;
-    */
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main_menu);
-    createCutomActionBarTitle();
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_grammar);
+        createCutomActionBarTitle();
 
-// Fonts:
+ //       createCutomActionBarTitle();
+
+    btnQuiz = (TextView) findViewById(R.id.btnBeginQuiz);
+    btnMenu = (TextView) findViewById(R.id.btnMainMenu);
+
+// Font:
         header = (TextView) findViewById(R.id.headerQuiz);
         Typeface teacherFont = Typeface.createFromAsset(getAssets(),"fonts/freehand.ttf");
         header.setTypeface(teacherFont);
+        btnQuiz.setTypeface(teacherFont);
+        btnMenu.setTypeface(teacherFont);
 
-//    exit button
-    ImageButton exitOut = (ImageButton) findViewById(R.id.exitImgButton);
-    exitOut.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            // TODO Auto-generated method stub
-            finish();
-            android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(1);
-            //System.exit(0);
-        }
-    });
 
-    }
+// List:
+        mylistview = (ExpandableListView) findViewById(R.id.lvGrammar);
 
-    public void btnFirst_Grammar (View v){
-        startActivity(new Intent(MainMenu.this, Grammar.class));
-    }
+//        listAdapter = new ArrayAdapter<String>(this,
+//                R.layout.list_white_text, R.id.list_content, getResources().getStringArray(R.array.arrGrammar));
+        ArrayList<String> words = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.arrGrammar)));
+        listAdapter = new WordListArrayAdapter(this, words);
 
-    public void btnSecond_Quiz (View v){
-//        firstTime = false;
-        startActivity(new Intent(MainMenu.this, QuizAnswer.class));
-    }
+        mylistview.setAdapter(listAdapter);
 
+//        mylistview.setTextColor(color.parseColor("#F12345"));
+
+            }
+
+
+
+
+//////
+
+
+
+
+    public void btnBeginQuiz (View v) {startActivity(new Intent(GrammarActivity.this, QuizAnswerActivity.class));}
+    public void mainMenu (View v) {startActivity(new Intent(GrammarActivity.this, MainMenuActivity.class));}
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        getMenuInflater().inflate(R.menu.grammar, menu);
         return true;
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -118,19 +133,5 @@ public class MainMenu extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-
-
-
     }
-
-/*     @Override
-    protected void onResume() {
-        result = (TextView) findViewById(R.id.rightOrWrong);
-        smiley = (ImageView) findViewById(R.id.imgFace);
-
-       if (!firstTime) {
-            result.setText("GOOD  JOB !!!");
-            smiley.setImageResource(R.drawable.sad);
-        };
-    }
-*/}
+}
