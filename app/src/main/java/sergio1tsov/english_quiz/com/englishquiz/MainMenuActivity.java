@@ -4,7 +4,6 @@ import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
@@ -16,7 +15,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 
-public class MainMenu extends Activity {
+public class MainMenuActivity extends Activity {
 
     private TextView header;
 
@@ -25,7 +24,7 @@ public class MainMenu extends Activity {
         this.getActionBar().setDisplayShowCustomEnabled(true);
         this.getActionBar().setDisplayShowTitleEnabled(false);
 
-        LayoutInflater inflator = LayoutInflater.from(MainMenu.this);
+        LayoutInflater inflator = LayoutInflater.from(MainMenuActivity.this);
         View v = inflator.inflate(R.layout.custom_action_bar, null);
 
         Typeface tf = Typeface.createFromAsset(getAssets(),"fonts/freehand.ttf");
@@ -37,14 +36,14 @@ public class MainMenu extends Activity {
         frag1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainMenu.this, MainMenu.class));
+                startActivity(new Intent(MainMenuActivity.this, MainMenuActivity.class));
                 finish();
             }
         });
         frag2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainMenu.this, MainMenu.class));
+                startActivity(new Intent(MainMenuActivity.this, MainMenuActivity.class));
                 finish();
             }
         });
@@ -91,12 +90,12 @@ public class MainMenu extends Activity {
     }
 
     public void btnFirst_Grammar (View v){
-        startActivity(new Intent(MainMenu.this, Grammar.class));
+        startActivity(new Intent(MainMenuActivity.this, GrammarActivity.class));
     }
 
     public void btnSecond_Quiz (View v){
 //        firstTime = false;
-        startActivity(new Intent(MainMenu.this, QuizAnswer.class));
+        startActivity(new Intent(MainMenuActivity.this, QuizAnswerActivity.class));
     }
 
 

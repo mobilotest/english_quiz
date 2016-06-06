@@ -3,9 +3,7 @@ package sergio1tsov.english_quiz.com.englishquiz;
 import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.ListActivity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,16 +11,12 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
-public class Grammar extends Activity {
+public class GrammarActivity extends Activity {
 
     private ListView mylistview;
     private ArrayAdapter<String> listAdapter;
@@ -37,7 +31,7 @@ public class Grammar extends Activity {
         this.getActionBar().setDisplayShowCustomEnabled(true);
         this.getActionBar().setDisplayShowTitleEnabled(false);
 
-        LayoutInflater inflator = LayoutInflater.from(Grammar.this);
+        LayoutInflater inflator = LayoutInflater.from(GrammarActivity.this);
         View v = inflator.inflate(R.layout.custom_action_bar, null);
 
         Typeface tf = Typeface.createFromAsset(getAssets(),"fonts/freehand.ttf");
@@ -49,14 +43,14 @@ public class Grammar extends Activity {
         frag1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Grammar.this, MainMenu.class));
+                startActivity(new Intent(GrammarActivity.this, MainMenuActivity.class));
                 finish();
             }
         });
         frag2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Grammar.this, MainMenu.class));
+                startActivity(new Intent(GrammarActivity.this, MainMenuActivity.class));
                 finish();
             }
         });
@@ -108,8 +102,8 @@ public class Grammar extends Activity {
 
 
 
-    public void btnBeginQuiz (View v) {startActivity(new Intent(Grammar.this, QuizAnswer.class));}
-    public void mainMenu (View v) {startActivity(new Intent(Grammar.this, MainMenu.class));}
+    public void btnBeginQuiz (View v) {startActivity(new Intent(GrammarActivity.this, QuizAnswerActivity.class));}
+    public void mainMenu (View v) {startActivity(new Intent(GrammarActivity.this, MainMenuActivity.class));}
 
 
     @Override

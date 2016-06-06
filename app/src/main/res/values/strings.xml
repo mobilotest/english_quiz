@@ -11,7 +11,7 @@
     <string name="right">RIGHT</string>
     <string name="wrong">WRONG</string>
     <string name="title_activity_quiz_question">QuizQuestion</string>
-    <string name="title_activity_quiz_answer">QuizAnswer</string>
+    <string name="title_activity_quiz_answer">QuizAnswerActivity</string>
     <string name="title_activity_good_menu" />
     <string name="title_activity_sad_menu" />
     -->
