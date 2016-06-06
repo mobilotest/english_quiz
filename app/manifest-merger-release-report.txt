@@ -25,7 +25,7 @@ ADDED from AndroidManifest.xml:7:5
 		ADDED from AndroidManifest.xml:9:9
 	android:theme
 		ADDED from AndroidManifest.xml:11:9
-activity#sergio1tsov.english_quiz.com.englishquiz.MainMenu
+activity#sergio1tsov.english_quiz.com.englishquiz.MainMenuActivity
 ADDED from AndroidManifest.xml:13:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:16:13
@@ -49,7 +49,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:23:17
 	android:name
 		ADDED from AndroidManifest.xml:23:27
-activity#sergio1tsov.english_quiz.com.englishquiz.Grammar
+activity#sergio1tsov.english_quiz.com.englishquiz.GrammarActivity
 ADDED from AndroidManifest.xml:26:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:29:13
@@ -57,7 +57,7 @@ ADDED from AndroidManifest.xml:26:9
 		ADDED from AndroidManifest.xml:28:13
 	android:name
 		ADDED from AndroidManifest.xml:27:13
-activity#sergio1tsov.english_quiz.com.englishquiz.QuizAnswer
+activity#sergio1tsov.english_quiz.com.englishquiz.QuizAnswerActivity
 ADDED from AndroidManifest.xml:35:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:38:13
